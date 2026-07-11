@@ -109,6 +109,7 @@ const SPEAKING = [
     location: 'Ahmedabad',
     date: '2023',
     image: speakerImg,
+    href: 'https://x.com/imansi_joshi/status/1711228025462034554',
   },
   {
     title: 'Filecoin & IPFS (Billion Reasons to Build)',
@@ -117,6 +118,7 @@ const SPEAKING = [
     date: '2023',
     image: ipfsImg,
     imagePos: 'center 65%',
+    href: 'https://x.com/imansi_joshi/status/1709039549408829719',
   },
   {
     title: 'Perpetual Storage Workshop with Lighthouse',
@@ -124,6 +126,7 @@ const SPEAKING = [
     location: 'Gujarat University',
     date: '2023',
     image: gujaratImg,
+    href: 'https://x.com/imansi_joshi/status/1629756216963637249',
   },
 ]
 
@@ -234,6 +237,56 @@ function GitHubIcon() {
   )
 }
 
+function LinkedInIcon() {
+  return (
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M6.5 8.25H3V21h3.5V8.25ZM4.75 3A2.05 2.05 0 1 0 4.75 7.1 2.05 2.05 0 0 0 4.75 3ZM21 13.7c0-3.84-2.05-5.63-4.78-5.63-2.2 0-3.19 1.21-3.74 2.06V8.25H9V21h3.48v-6.31c0-1.67.32-3.29 2.39-3.29 2.04 0 2.06 1.91 2.06 3.4V21H21v-7.3Z" />
+    </svg>
+  )
+}
+
+function XIcon() {
+  return (
+    <svg width="21" height="21" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M18.9 2H22l-6.77 7.74L23.2 22h-6.24l-4.89-6.39L6.48 22H3.36l7.26-8.3L2.98 2h6.4l4.42 5.84L18.9 2Zm-1.1 17.84h1.72L8.44 4.05H6.6L17.8 19.84Z" />
+    </svg>
+  )
+}
+
+function ExternalLinkIcon() {
+  return (
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+    </svg>
+  )
+}
+
+function ExtensionIcon() {
+  return (
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <path d="M12 2v6M9 5h6M5 9h14a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2Z" />
+    </svg>
+  )
+}
+
+function PlayIcon() {
+  return (
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <circle cx="12" cy="12" r="9" />
+      <path d="m10 8 6 4-6 4V8Z" />
+    </svg>
+  )
+}
+
+function MailIcon() {
+  return (
+    <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <rect x="3" y="5" width="18" height="14" rx="2" />
+      <path d="m3 7 9 6 9-6" />
+    </svg>
+  )
+}
+
 function SunIcon() {
   return (
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
@@ -287,11 +340,9 @@ export default function App() {
 
   return (
     <div className="page">
-      {/* Floating Nav */}
       <nav className="nav">
         <a href="#home" onClick={(e) => handleNav(e, 'home')} className="nav-logo">
-          <span className="nav-logo-mark">↗</span>
-          <span className="nav-logo-text">Mansi Joshi</span>
+          Mansi Joshi
         </a>
         <div className="nav-links">
           {NAV.map((n) => (
@@ -307,296 +358,94 @@ export default function App() {
         </div>
       </nav>
 
-      {/* Hero */}
       <section className="hero" id="home">
-        <div className="hero-left">
-          <h1 className="display">
-            Hi, I'm <br />
-            Mansi <span className="sparkle">✨</span>
-          </h1>
+        <div>
+          <p className="eyebrow">Web3 developer · educator · builder</p>
           <p className="lede">
-            Web3 developer at <strong>CodeCrunch Techlabs</strong>, building
-          &nbsp;<strong>BugBuzzer</strong> and creating
-            content in regional language at <strong>BlockchainHQ</strong> YouTube channel.
+            I’m a full-stack blockchain developer at <strong>CodeCrunch Techlabs</strong> with
+            five years in Web3 and two years in Web2. I build products, teach blockchain in
+            regional languages, and document the people shaping the ecosystem.
           </p>
-          <div className="cta-row">
-            <a className="btn btn-dark" href="#projects" onClick={(e) => handleNav(e, 'projects')}>
-              See my work
-            </a>
-            <a className="btn btn-outline" href="#contact" onClick={(e) => handleNav(e, 'contact')}>
-              Say hello
-            </a>
-          </div>
-        </div>
-        <div className="hero-right">
-          <div className="photo-frame">
-            <div className="photo-deco photo-deco-1">✦</div>
-            <div className="photo-deco photo-deco-2">★</div>
-            <div className="photo-deco photo-deco-3">✺</div>
-            <div className="photo-wrap">
-              <img src={speakerImg} alt="Mansi Joshi" />
-            </div>
-            <div className="photo-badge">
-              <span className="photo-badge-dot" /> Available for work
-            </div>
+          <div className="text-links">
+            <a href="https://www.linkedin.com/in/mansi-joshi-657521187/" target="_blank" rel="noreferrer" aria-label="LinkedIn" title="LinkedIn"><LinkedInIcon /></a>
+            <a href="https://x.com/imansi_joshi" target="_blank" rel="noreferrer" aria-label="Twitter / X" title="Twitter / X"><XIcon /></a>
+            <a href="https://github.com/mansijoshi17" target="_blank" rel="noreferrer" aria-label="GitHub" title="GitHub"><GitHubIcon /></a>
           </div>
         </div>
       </section>
 
-      {/* About */}
-      <section className="section" id="about">
-        <h2 className="display-md">About</h2>
-        <p className="section-sub">A little bit about me.</p>
-        <div className="about-card">
-          <p>
-            I'm a <strong>Web3 developer with 5 years of experience</strong> shipping
-            decentralized apps, plus <strong>2 years in Web2</strong> building
-            full-stack applications.
-          </p>
-          <p>
-            I'm a <strong>quick learner</strong>, Whether it's new languages, new chains, new
-            frameworks, I'll figure it out. Hackathon enthusiast, multi-chain builder,
-            and someone who genuinely believes the best way to learn anything is to
-            just start building it.
-          </p>
-        </div>
-      </section>
-
-      {/* Experience */}
-      <section className="section" id="experience">
-        <h2 className="display-md">Work Experience</h2>
-        <p className="section-sub">Where I've worked.</p>
-        <div className="experience-list">
-          <div className="exp-company-header">
-            <h3 className="exp-company">CodeCrunch Techlabs</h3>
-            <span className="exp-tenure">Full-time · 7 yrs</span>
-          </div>
-          <div className="exp-timeline">
-            {EXPERIENCE.map((exp, i) => (
-              <div className="exp-item" key={i}>
-                <div className="exp-dot" />
-                <div className="exp-content">
-                  <h4 className="exp-role">{exp.role}</h4>
-                  <p className="exp-period">{exp.period}</p>
-                  <p className="exp-location">{exp.location}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Skills */}
-      <section className="section" id="skills">
-        <h2 className="display-md">Skills</h2>
-        <p className="section-sub">What I work with.</p>
-        <div className="skills-grid">
-          {SKILLS.map((s) => (
-            <div className="skill-card" key={s.title}>
-              <div className="skill-icon">{s.icon}</div>
-              <h3>{s.title}</h3>
-              <div className="skill-tags">
-                {s.tags.map((t) => (
-                  <span className="chip" key={t}>
-                    {t}
-                  </span>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Projects */}
       <section className="section" id="projects">
-        <h2 className="display-md">Projects</h2>
-        <p className="section-sub">Things I've built.</p>
-        <div className="projects-grid">
-          {PROJECTS.map((p) => (
-            <div className="project-card" key={p.title}>
-              <div className="project-top">
-                <span className="project-emoji">{p.emoji}</span>
-                <a
-                  className="project-gh"
-                  href={p.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={`${p.title} on GitHub`}
-                >
-                  <GitHubIcon />
-                </a>
-              </div>
-              <h3>{p.title}</h3>
-              <p>{p.desc}</p>
-              <div className="chip-row">
-                {p.tech.map((t) => (
-                  <span className="chip chip-sm" key={t}>
-                    {t}
-                  </span>
-                ))}
-              </div>
-              {p.links && (
-                <div className="project-actions">
-                  {p.links.map((l) => (
-                    <a
-                      key={l.label}
-                      className="btn btn-sm btn-dark"
-                      href={l.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {l.label} ↗
+        <div className="section-heading"><span>01</span><h2>Selected projects</h2></div>
+        <div className="project-list">
+          {PROJECTS.map((p, index) => (
+            <article className="project" key={p.title}>
+              <div className="project-number">0{index + 1}</div>
+              <div className="project-content">
+                <h3>{p.title}</h3>
+                <p>{p.desc}</p>
+                <p className="project-tech">{p.tech.join(' · ')}</p>
+                <div className="project-links">
+                  {p.links?.map((link) => (
+                    <a key={link.label} href={link.href} target="_blank" rel="noreferrer" aria-label={link.label} title={link.label}>
+                      {link.label === 'Get Extension' ? <ExtensionIcon /> : <ExternalLinkIcon />}
                     </a>
                   ))}
+                  <a href={p.href} target="_blank" rel="noreferrer" aria-label="Source code" title="Source code"><GitHubIcon /></a>
                 </div>
-              )}
-            </div>
+              </div>
+            </article>
           ))}
         </div>
       </section>
 
-      {/* Education & Community */}
-      <section className="section community-section" id="community">
-        <div className="community-label">COMMUNITY</div>
-        <h2 className="community-title">Education &amp; Community</h2>
-
-        <div className="community-grid">
-          <div className="community-col">
-            <h3 className="community-col-title">Technical Content</h3>
-            <div className="community-list">
-              {TECH_CONTENT.map((item) => (
-                <a
-                  className="community-card"
-                  key={item.title}
-                  href={item.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <h4>{item.title}</h4>
-                  <p>{item.excerpt}</p>
-                  <div className="card-bottom-row">
-                    <div className="chip-row">
-                      {item.tags.map((t) => (
-                        <span className="chip chip-sm" key={t}>
-                          {t}
-                        </span>
-                      ))}
-                    </div>
-                    <span className="yt-link-hint">
-                      <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
-                        <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.5 31.5 0 0 0 0 12a31.5 31.5 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1c.4-1.9.5-5.8.5-5.8s0-3.9-.5-5.8ZM9.5 15.6V8.4l6.3 3.6-6.3 3.6Z"/>
-                      </svg>
-                      Watch
-                      <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M7 17L17 7M17 7H7M17 7v10"/>
-                      </svg>
-                    </span>
-                  </div>
-                </a>
-              ))}
-            </div>
-          </div>
-
-          <div className="community-col">
-            <h3 className="community-col-title">Speaking</h3>
-            <div className="community-list">
-              {SPEAKING.map((talk) => (
-                <div className="community-card speaking-card" key={talk.title}>
-                  <h4>{talk.title}</h4>
-                  <div className="speaking-meta">
-                    <div className="speaking-org">{talk.org}</div>
-                    <div className="speaking-loc">{talk.location}</div>
-                    <div className="speaking-date">{talk.date}</div>
-                  </div>
-                  {talk.blurb && <p className="speaking-blurb">{talk.blurb}</p>}
-                  <div className="speaking-thumb">
-                    <img
-                      src={talk.image}
-                      alt={talk.title}
-                      style={talk.imagePos ? { objectPosition: talk.imagePos } : undefined}
-                    />
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
+      <section className="section" id="experience">
+        <div className="section-heading"><span>02</span><h2>Experience &amp; toolkit</h2></div>
+        <div className="split">
+          <div><h3>CodeCrunch Techlabs</h3>{EXPERIENCE.map((exp) => <div className="line-item" key={exp.role}><strong>{exp.role}</strong><span>{exp.period}</span><small>{exp.location}</small></div>)}</div>
+          <div>{SKILLS.map((skill) => <div className="skill-line" key={skill.title}><h3>{skill.title}</h3><p>{skill.tags.join(', ')}</p></div>)}</div>
         </div>
+      </section>
 
-        {/* Community Events row */}
-        <div className="community-events-row">
-          <h3 className="community-col-title">Community Events &amp; Interviews</h3>
-          <div className="events-grid">
-            {COMMUNITY_EVENTS.map((ev) => (
-              <a
-                key={ev.title}
-                className="event-card"
-                href={ev.href}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <div className="event-emoji">{ev.emoji}</div>
-                <div className="event-body">
-                  <h4>{ev.title}</h4>
-                  <p>{ev.excerpt}</p>
-                  <div className="card-bottom-row">
-                    <div className="chip-row">
-                      {ev.tags.map((t) => (
-                        <span className="chip chip-sm" key={t}>
-                          {t}
-                        </span>
-                      ))}
-                    </div>
-                    <span className="yt-link-hint">
-                      <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
-                        <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.5 31.5 0 0 0 0 12a31.5 31.5 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1c.4-1.9.5-5.8.5-5.8s0-3.9-.5-5.8ZM9.5 15.6V8.4l6.3 3.6-6.3 3.6Z"/>
-                      </svg>
-                      Watch
-                      <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M7 17L17 7M17 7H7M17 7v10"/>
-                      </svg>
-                    </span>
-                  </div>
-                </div>
-              </a>
+      <section className="section" id="community">
+        <div className="section-heading"><span>03</span><h2>Education &amp; community</h2></div>
+        <p className="section-intro">I make technical learning approachable in regional languages and share stories from builders across the Web3 ecosystem.</p>
+        <div className="content-grid">
+          <div>
+            <h3 className="subheading">Technical content</h3>
+            {TECH_CONTENT.map((item) => <a className="content-row" key={item.title} href={item.href} target="_blank" rel="noreferrer" aria-label={`Watch ${item.title}`}><span><strong>{item.title}</strong><small>{item.excerpt}</small></span><span className="action-icon" title="Watch"><PlayIcon /></span></a>)}
+          </div>
+          <div>
+            <h3 className="subheading">Speaking</h3>
+            {SPEAKING.map((talk) => (
+              <article className="talk" key={talk.title}>
+                {talk.href ? (
+                  <a className="talk-link" href={talk.href} target="_blank" rel="noreferrer" aria-label={`View ${talk.title} on X`}>
+                    <img src={talk.image} alt="" style={talk.imagePos ? { objectPosition: talk.imagePos } : undefined}/>
+                    <div><strong>{talk.title}</strong><small>{talk.org}<br/>{talk.location} · {talk.date}</small></div>
+                  </a>
+                ) : (
+                  <>
+                    <img src={talk.image} alt="" style={talk.imagePos ? { objectPosition: talk.imagePos } : undefined}/>
+                    <div><strong>{talk.title}</strong><small>{talk.org}<br/>{talk.location} · {talk.date}</small></div>
+                  </>
+                )}
+              </article>
             ))}
           </div>
         </div>
+        <h3 className="subheading event-heading">Events &amp; interviews</h3>
+        {COMMUNITY_EVENTS.map((event) => <a className="event-row" key={event.title} href={event.href} target="_blank" rel="noreferrer" aria-label={`Watch ${event.title}`}><strong>{event.title}</strong><span>{event.excerpt}</span><span className="action-icon" title="Watch"><PlayIcon /></span></a>)}
       </section>
 
-      {/* Blog */}
       <section className="section" id="blog">
-        <h2 className="display-md">Blog</h2>
-        <p className="section-sub">
-          Read about my Web3 journey, builds and the things I'm learning.
-        </p>
-        <div className="blog-list">
-          {POSTS.map((post) => (
-            <a className="blog-card" key={post.title} href={post.href} target="_blank" rel="noopener noreferrer">
-              <div className="blog-thumb">
-                {post.image ? (
-                  <img src={post.image} alt={post.title} className="blog-thumb-img" />
-                ) : (
-                  <div className="blog-thumb-inner">
-                    <span className="blog-thumb-emoji">📝</span>
-                  </div>
-                )}
-                <span className="blog-thumb-tag">{post.tag}</span>
-              </div>
-              <div className="blog-meta">
-                <h3>{post.title}</h3>
-                <div className="blog-date">{post.date}</div>
-                <p>{post.excerpt}</p>
-                <span className="blog-read">Read on X →</span>
-              </div>
-            </a>
-          ))}
-        </div>
+        <div className="section-heading"><span>04</span><h2>Writing</h2></div>
+        {POSTS.map((post) => <a className="post" key={post.title} href={post.href} target="_blank" rel="noreferrer" aria-label={`Read ${post.title} on X`}><img src={post.image} alt=""/><div><time>{post.date}</time><h3>{post.title}</h3><p>{post.excerpt}</p><span className="action-icon" title="Read on X"><XIcon /></span></div></a>)}
       </section>
 
-      {/* Contact */}
       <section className="contact-minimal" id="contact">
-        <h2 className="contact-minimal-title">Contact</h2>
-        <hr className="contact-divider" />
+        <p className="eyebrow">Have a project or conversation in mind?</p>
+        <h2>Let’s build something useful.</h2>
+        <a className="email-link action-icon" href="mailto:mansijoshi1777@gmail.com" aria-label="Email Mansi Joshi" title="Email Mansi Joshi"><MailIcon /></a>
         <div className="contact-footer-row">
           <p className="contact-copyright">&copy; 2026 Mansi Joshi. All rights reserved.</p>
           <div className="contact-links">
